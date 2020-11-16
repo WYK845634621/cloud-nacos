@@ -29,4 +29,11 @@ public class HelloController {
     public String where(){
         return "here:  " + isFrom;
     }
+
+    @Value("${en:local}")
+    private String en;
+    @GetMapping("/en")
+    private String en(){
+        return "now: " +en;
+    }
 }
